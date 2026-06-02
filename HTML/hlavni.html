@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deník nálad</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="../CSS/hlavni.css">
+</head>
+<body>
+
+    <header>
+        <h1>Deník nálad</h1>
+
+        <div class="user">
+            <span id="username">Uživatel</span>
+            <button id="logout">Odhlásit</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="top-cards">
+            <div class="card">
+                <h2>To-Do cíle</h2>
+                <p>Naplánuj si dnešní úkoly a cíle.</p>
+                <a href="todo.html" class="card-btn">Otevřít</a>
+            </div>
+
+            <div class="card">
+                <h2>Návyky</h2>
+                <p>Sleduj své každodenní návyky a pokrok.</p>
+                <a href="navyky.html" class="card-btn">Otevřít</a>
+            </div>
+        </section>
+
+        <section class="journal-section">
+            <div class="journal-form-box">
+                <div class="journal-head">
+                    <div>
+                        <h2>Večerní zápis</h2>
+                        <p id="todayLabel" class="today-label">Dnes</p>
+                    </div>
+                </div>
+
+                <p class="journal-tip">Aplikace je doporučena používat večer před spaním.</p>
+
+                <textarea id="journalInput" placeholder="Jaký jsi měl dnes den? Co se povedlo, co tě potěšilo nebo trápilo?"></textarea>
+
+                <div class="mood-box">
+                    <p class="mood-title">Jak se dnes cítíš?</p>
+
+                    <div class="mood-options">
+                        <button class="mood-btn" data-mood="😄" type="button">😄</button>
+                        <button class="mood-btn" data-mood="🙂" type="button">🙂</button>
+                        <button class="mood-btn" data-mood="😐" type="button">😐</button>
+                        <button class="mood-btn" data-mood="😔" type="button">😔</button>
+                        <button class="mood-btn" data-mood="😢" type="button">😢</button>
+                    </div>
+
+                    <p id="selectedMoodText" class="selected-mood-text">Vybraná nálada: žádná</p>
+                </div>
+
+                <button id="saveJournalBtn" class="save-btn">Uložit zápis</button>
+                <p id="pageMessage"></p>
+            </div>
+
+            <div class="journal-list-box">
+                <h2>Moje zápisky</h2>
+
+                <div id="journalList" class="journal-list"></div>
+
+                <div id="journalPagination" class="journal-pagination">
+                    <button id="prevPageBtn" class="pagination-btn" type="button">← Předchozí</button>
+                    <span id="pageIndicator" class="page-indicator">Stránka 1 / 1</span>
+                    <button id="nextPageBtn" class="pagination-btn" type="button">Další →</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Všechna práva vyhrazena • Vytvořil Xbw1N</p>
+    </footer>
+
+    <script type="module" src="../JS/hlavni.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deník nálad</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Deník nálad</h1>
+
+        <div class="card">
+            <div class="tabs">
+                <button id="loginTab" type="button" class="active">Přihlášení</button>
+                <button id="registerTab" type="button">Registrace</button>
+            </div>
+
+            <div id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Email">
+                <input type="password" id="loginPassword" placeholder="Heslo">
+                <button type="button" onclick="login()">Přihlásit se</button>
+            </div>
+
+            <div id="registerForm" style="display: none;">
+                <input type="text" id="registerNickname" placeholder="Přezdívka">
+                <input type="email" id="registerEmail" placeholder="Email">
+                <input type="password" id="registerPassword" placeholder="Heslo">
+                <button type="button" onclick="register()">Registrovat</button>
+            </div>
+
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 Všechna práva vyhrazena • Vytvořil Xbw1N</p>
+    </footer>
+
+    <script type="module" src="../JS/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do cíle | Deník nálad</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="../CSS/todo.css">
+</head>
+<body>
+
+    <header>
+        <div class="nadpisy">
+            <h1>To-Do cíle</h1>
+            <a href="hlavni.html" class="back-btn">Zpět</a>
+        </div>
+
+        <div class="user">
+            <span id="username">Uživatel</span>
+            <button id="logout">Odhlásit</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-box">
+            <h2>Úkoly na dnešek</h2>
+            <p>Přidej si úkol a automaticky se uloží do dnešního dne.</p>
+
+            <div class="todo-form">
+                <input type="text" id="todoInput" placeholder="Např. Dodělat projekt do školy">
+                <button class="save-btn" id="addTodoBtn">Přidat úkol</button>
+            </div>
+
+            <p id="pageMessage"></p>
+
+            <div id="todoGroups" class="todo-groups"></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Všechna práva vyhrazena • Vytvořil Xbw1N</p>
+    </footer>
+
+    <script type="module" src="../JS/todo.js"></script>
+</body>
+</html>

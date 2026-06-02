@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Návyky | Deník nálad</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../CSS/common.css">
+    <link rel="stylesheet" href="../CSS/navyky.css">
+</head>
+<body>
+
+    <header>
+        <div class="nadpisy">
+            <h1>Návyky</h1>
+            <a href="hlavni.html" class="back-btn">Zpět</a>
+        </div>
+
+        <div class="user">
+            <span id="username">Uživatel</span>
+            <button id="logout">Odhlásit</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="habits-layout">
+
+            <section class="habits-left page-box">
+                <div class="habits-top">
+                    <div>
+                        <h2 id="selectedDayTitle">Návyky pro dnešek</h2>
+                        <p id="selectedDayDate">Vybraný den</p>
+                    </div>
+
+                    <button id="openManageHabitsBtn" class="save-btn">Každodenní návyky</button>
+                </div>
+
+                <p id="dayProgressText" class="day-progress-text">Splněno: 0 / 0</p>
+                <p id="pageMessage"></p>
+
+                <div id="dayHabitsList" class="day-habits-list"></div>
+            </section>
+
+            <aside class="habits-right page-box">
+                <div class="calendar-header">
+                    <button id="prevMonthBtn" class="calendar-nav-btn">←</button>
+                    <h2 id="calendarMonthLabel">Březen 2026</h2>
+                    <button id="nextMonthBtn" class="calendar-nav-btn">→</button>
+                </div>
+
+                <div class="calendar-weekdays">
+                    <div>Po</div>
+                    <div>Út</div>
+                    <div>St</div>
+                    <div>Čt</div>
+                    <div>Pá</div>
+                    <div>So</div>
+                    <div>Ne</div>
+                </div>
+
+                <div id="calendarGrid" class="calendar-grid"></div>
+            </aside>
+
+        </div>
+    </main>
+
+    <div id="manageHabitsModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-top">
+                <h2>Každodenní návyky</h2>
+                <button id="closeManageHabitsBtn" class="close-btn">✕</button>
+            </div>
+
+            <p>Přidej si návyky, které chceš každý den sledovat.</p>
+
+            <div class="manage-form">
+                <input type="text" id="habitInput" placeholder="Např. Vypít 2 litry vody">
+                <button id="addHabitBtn" class="save-btn">Přidat návyk</button>
+            </div>
+
+            <div id="masterHabitsList" class="master-habits-list"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 Všechna práva vyhrazena • Vytvořil Xbw1N</p>
+    </footer>
+
+    <script type="module" src="../JS/navyky.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+.mood-options{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.mood-btn{
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    font-size:28px;
+    background:#f3f4f6;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.mood-btn:hover{
+    background:#d1fae5;
+    transform:scale(1.08);
+}
+
+.mood-btn.selected{
+    background:#61db65;
+    transform:scale(1.08);
+}

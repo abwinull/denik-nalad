@@ -1,0 +1,254 @@
+.habits-layout{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 25px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.habits-left,
+.habits-right{
+    min-height: 650px;
+    width: 600px;
+}
+
+.habits-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.habits-top h2{
+    margin-bottom: 6px;
+}
+
+.habits-top p{
+    color: #6b7280;
+}
+
+.day-progress-text{
+    margin-bottom: 18px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.day-habits-list{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.day-habit-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 18px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    flex-wrap: wrap;
+}
+
+.day-habit-label{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #111827;
+}
+
+.day-habit-label input{
+    width: 18px;
+    height: 18px;
+    accent-color: #61db65;
+}
+
+.empty-info{
+    color: #6b7280;
+    font-style: italic;
+    padding: 10px 0;
+}
+
+.calendar-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.calendar-header h2{
+    font-size: 24px;
+    text-align: center;
+}
+
+.calendar-nav-btn{
+    background: #61db65;
+    color: white;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.calendar-nav-btn:hover{
+    background: #4fc553;
+}
+
+.calendar-weekdays{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.calendar-weekdays div{
+    text-align: center;
+    font-weight: 600;
+    color: #374151;
+    padding: 8px 0;
+}
+
+.calendar-grid{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.calendar-day{
+    min-height: 64px;
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    background: white;
+    color: #111827;
+}
+
+.calendar-day:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+
+.calendar-day.empty{
+    background: transparent;
+    border: none;
+    cursor: default;
+    box-shadow: none;
+}
+
+.calendar-day.selected{
+    outline: 3px solid #111827;
+}
+
+.calendar-day.today{
+    border: 2px solid #61db65;
+}
+
+.modal{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 999;
+}
+
+.modal.hidden{
+    display: none;
+}
+
+.modal-content{
+    width: 100%;
+    max-width: 700px;
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.2);
+}
+
+.modal-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.close-btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #ef4444;
+    color: white;
+    font-size: 18px;
+}
+
+.close-btn:hover{
+    background: #dc2626;
+}
+
+.manage-form{
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.manage-form input{
+    flex: 1;
+    min-width: 240px;
+}
+
+.master-habits-list{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.master-habit-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #f9fafb;
+    flex-wrap: wrap;
+}
+
+.master-habit-item span{
+    font-weight: 500;
+    color: #111827;
+}
+
+.habit-delete-btn{
+    padding: 8px 12px;
+}
+
+@media (max-width: 1050px){
+    .habits-layout{
+        grid-template-columns: 1fr;
+    }
+
+    .habits-left,
+    .habits-right{
+        min-height: auto;
+    }
+}
